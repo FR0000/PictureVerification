@@ -26,7 +26,7 @@ public class PictureVerification {
     public static void main(String[] args) throws Exception {
         if (args.length > 2) {
             settings.setBotToken(args[0]);
-            settings.setVerifiedRoleName(args[1]);
+            settings.setVerifiedRoleName(args[1].replaceAll("_", " "));
             settings.setServerID(Long.parseLong(args[2]));
         } else {
             System.out.println("PictureVerifiaction.jar <BotToken> <Name of Verified Role> <ServerID>");
